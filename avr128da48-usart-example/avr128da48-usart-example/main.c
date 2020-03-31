@@ -22,54 +22,54 @@
 */
 
 #define F_CPU                           (4000000UL)         /* using default clock 4MHz*/
-#define USART0_BAUD_RATE(BAUD_RATE)     ((float)(64 * 4000000 / (16 * (float)BAUD_RATE)) + 0.5)
+#define USART1_BAUD_RATE(BAUD_RATE)     ((float)(64 * 4000000 / (16 * (float)BAUD_RATE)) + 0.5)
 
 #include <avr/io.h>
 #include <util/delay.h>
 #include <string.h>
 
-void USART0_init(void);
-void USART0_sendChar(char c);
-void USART0_sendString(char *str);
+void USART1_init(void);
+void USART1_sendChar(char c);
+void USART1_sendString(char *str);
 
-void USART0_init(void)
+void USART1_init(void)
 {
-    PORTA.DIRSET &= ~PIN1_bm;                           /* set pin 1 of PORT A (RXd) as output*/
-    PORTA.DIRSET |= PIN0_bm;                            /* set pin 0 of PORT A (TXd) as input*/
+    PORTC.DIRSET |= PIN0_bm;                            /* set pin 0 of PORT C (TXd) as output*/
+    PORTC.DIRSET &= ~PIN1_bm;                           /* set pin 1 of PORT C (RXd) as input*/
     
-    USART0.BAUD = (uint16_t)(USART0_BAUD_RATE(9600));   /* set the baud rate*/
+    USART1.BAUD = (uint16_t)(USART1_BAUD_RATE(9600));   /* set the baud rate*/
     
-    USART0.CTRLC = USART_CHSIZE0_bm
+    USART1.CTRLC = USART_CHSIZE0_bm
                  | USART_CHSIZE1_bm;                    /* set the data format to 8-bit*/
                  
-    USART0.CTRLB |= USART_TXEN_bm;                      /* enable transmitter*/
+    USART1.CTRLB |= USART_TXEN_bm;                      /* enable transmitter*/
 }
 
-void USART0_sendChar(char c)
+void USART1_sendChar(char c)
 {
-    while(!(USART0.STATUS & USART_DREIF_bm))
+    while(!(USART1.STATUS & USART_DREIF_bm))
     {
         ;
     }
     
-    USART0.TXDATAL = c;
+    USART1.TXDATAL = c;
 }
 
-void USART0_sendString(char *str)
+void USART1_sendString(char *str)
 {
     for(size_t i = 0; i < strlen(str); i++)    
     {        
-        USART0_sendChar(str[i]);    
+        USART1_sendChar(str[i]);    
     }
 }
 
 int main(void)
 {
-    USART0_init();
+    USART1_init();
     
     while (1) 
     {
-        USART0_sendString("Hello World!\r\n");
+        USART1_sendString("Hello World!\r\n");
         _delay_ms(1000);
     }
 }

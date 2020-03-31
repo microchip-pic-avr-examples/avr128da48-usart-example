@@ -8,11 +8,12 @@ The example demonstrates the basic functionality of the USART peripheral. The me
 
 ## Configurations
 
-- USART0:
+- USART1:
   * Baud rate 9600
   * Transmitter enabled
   * Data format to 8-bit
-  * PA0 as TXd
+  * PC0 as TXd
+  * PC1 as RXd
 
 <img src="images/AVR128DA48_CNANO_instructions.PNG" height="250">
 
