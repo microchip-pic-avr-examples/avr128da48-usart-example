@@ -34,8 +34,8 @@ void USART1_sendString(char *str);
 
 void USART1_init(void)
 {
-    PORTC.DIRSET |= PIN0_bm;                            /* set pin 0 of PORT C (TXd) as output*/
-    PORTC.DIRSET &= ~PIN1_bm;                           /* set pin 1 of PORT C (RXd) as input*/
+    PORTC.DIRSET = PIN0_bm;                             /* set pin 0 of PORT C (TXd) as output*/
+    PORTC.DIRCLR = PIN1_bm;                             /* set pin 1 of PORT C (RXd) as input*/
     
     USART1.BAUD = (uint16_t)(USART1_BAUD_RATE(9600));   /* set the baud rate*/
     
