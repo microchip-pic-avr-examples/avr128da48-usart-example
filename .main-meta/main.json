@@ -3,27 +3,27 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.studio.project.",
-        "version": " ",
-        "displayName": "  ",
-        "projectName": "",
-        "shortDescription": "",
+        "name": "com.microchip.mcu8.studio.project.avr128da48-usart-example",
+        "version": "1.0.4",
+        "displayName": "USART Hello World",
+        "projectName": "avr128da48-usart-example",
+        "shortDescription": "This repository contains a Microchip Studio source code example for how to use the Universal Synchronous and Asynchronous Receiver and Transmitter (USART)",
         "ide": {
-            "name": "",
-            "semverRange": ""
+            "name": "STUDIO",
+            "semverRange": ">=7.0.2397"
         },
         "compiler": [
 			{
-				"name": "",
-				"semverRange": ""
+				"name": "AVR GCC",
+				"semverRange": "^5.4.0"
 			}
 		],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "AVR-Dx",
+            "semverRange": "1.6.88"
         },
         "configurator": {
-            "name": "",
+            "name": "N/A",
             "semverRange": ""
         },
         "device": {
@@ -32,26 +32,20 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "",
+                "name": "AVR128DA48",
                 "versionRange": "*"
             }
         },
-        "author": "",
+        "author": "Microchip",
         "subcategories": [
-            "",
             [
-               "Peripherals", ""
-            ],
-            [
-               "Peripherals", ""
-            ]            			
+                "Peripherals",
+                "USART"
+            ]
         ],
-        "peripherals": [
-            "",""
+        "peripherals": [ "USART"
         ],
-        "keywords": [
-            "",
-            ""			
+        "keywords": [ "Getting Started", "Hello World"
         ],
 		"additionalData": {
 			"longDescription": {
