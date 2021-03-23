@@ -1,6 +1,6 @@
-<a href="https://www.microchip.com" rel="nofollow"><img src="images/Microchip.png" alt="MCHP" width="300"/></a>
+[![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# AVR128DA48 USART Hello World Code Example
+# Send Hello World! over USART
 
 This repository provides an Atmel Studio solution with a bare metal code example for a basic USART communication.
 This example demonstrates the basic functionality of the USART peripheral. The message "Hello world!" is sent through TXd (PC0) pin every one second and can be viewed using a terminal on a PC.
@@ -12,7 +12,7 @@ More details and code examples on the AVR128DA48 can be found at the following l
 - [AVR128DA48 Project Examples in START](https://start.atmel.com/#examples/AVR128DA48CuriosityNano)
 
 ## Software Used
-- Atmel Studio 7.0.2397 or newer [(microchip.com/mplab/avr-support/atmel-studio-7)](https://www.microchip.com/mplab/avr-support/atmel-studio-7)
+- Microchip Studio 7.0.2397 or newer [(Microchip Studio for AVR® and SAM Devices)](https://www.microchip.com/en-us/development-tools-tools-and-software/microchip-studio-for-avr-and-sam-devices)
 - AVR-Dx 1.0.18 or newer Device Pack
 
 ## Hardware Used

@@ -5,7 +5,7 @@
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.studio.project.avr128da48-usart-example",
         "version": "1.0.4",
-        "displayName": "USART Hello World",
+        "displayName": "Send Hello World! over USART",
         "projectName": "avr128da48-usart-example",
         "shortDescription": "This repository contains a Microchip Studio source code example for how to use the Universal Synchronous and Asynchronous Receiver and Transmitter (USART)",
         "ide": {
@@ -20,7 +20,7 @@
 		],
         "dfp": {
             "name": "AVR-Dx",
-            "semverRange": "1.6.88"
+            "semverRange": "^1.6.88"
         },
         "configurator": {
             "name": "N/A",
@@ -43,9 +43,12 @@
                 "USART"
             ]
         ],
-        "peripherals": [ "USART"
+        "peripherals":[
+						"USART"
         ],
-        "keywords": [ "Getting Started", "Hello World"
+        "keywords": [
+						"Getting Started",
+						"Hello World"
         ],
 		"additionalData": {
 			"longDescription": {
